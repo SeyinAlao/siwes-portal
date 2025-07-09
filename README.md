@@ -26,6 +26,7 @@ While working as part of a team, I:
 - **Database:** MySQL
 
 📬 Contact
-GitHub: @SeyinAlao
-LinkedIn: seyinalao
+
+- GitHub: @SeyinAlao
+- LinkedIn: seyinalao
 
