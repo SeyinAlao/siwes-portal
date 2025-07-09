@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Report Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+:root {
+    --grad-clr1: #141e30;
+    --grad-clr2: #243b55;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    color: var(--grad-clr1);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: var(--grad-clr2);
+    outline: none;
+}
+
+textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+    height: 150px;
+    resize: vertical;
+}
+
+textarea:focus {
+    border-color: var(--grad-clr2);
+    outline: none;
+}
+
+button[type="submit"] {
+    background: linear-gradient(to right, var(--grad-clr1), var(--grad-clr2));
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(to right, #101828, #1e344b);
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+}
+    </style>
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Student Report Form</h2>
+    <form method="post" id="reportform">
+      <div class="form-group">
+        <label for="adminName">Admin Name:</label>
+        <input type="text" id="adminName" name="adminName" placeholder="Enter your name" />
+      </div>
+      <div class="form-group">
+        <label for="adminPosition">Admin Position:</label>
+        <input type="text" id="adminPosition" name="adminPosition" placeholder="Enter your position" />
+      </div>
+      <div class="form-group">
+        <label for="experience">Your experience with our student:</label>
+        <textarea id="experience" name="experience" placeholder="Describe your experience with the student"></textarea>
+      </div>
+      <button type="submit">Submit Report</button>
+      <button type="submit" id="export-btn">Export Report</button>
+    </form>
+  </div>
+
+  <script src="reportform.js"></script>
+</body>
+</html>

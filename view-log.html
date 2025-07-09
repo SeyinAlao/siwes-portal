@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Log</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="week-title"></h1>
+        <div id="log-content"></div>
+        <a href="history.html" class="link-button">Back to Logs</a>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const params = new URLSearchParams(window.location.search);
+            const week = params.get("week");
+            const logs = JSON.parse(localStorage.getItem("logs")) || {};
+            const log = logs[`week${week}`];
+
+            if (log) {
+                document.getElementById("week-title").textContent = `Week ${week} Log`;
+                document.getElementById("log-content").innerHTML = `
+                    <p><strong>Monday:</strong> ${log.monday || "No entry"}</p>
+                    <p><strong>Tuesday:</strong> ${log.tuesday || "No entry"}</p>
+                    <p><strong>Wednesday:</strong> ${log.wednesday || "No entry"}</p>
+                    <p><strong>Thursday:</strong> ${log.thursday || "No entry"}</p>
+                    <p><strong>Friday:</strong> ${log.friday || "No entry"}</p>
+                `;
+            } else {
+                document.getElementById("log-content").innerHTML = "<p>No log found for this week.</p>";
+            }
+        });
+    </script>
+</body>
+</html>

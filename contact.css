@@ -1,0 +1,27 @@
+
+        body {
+     background-color: rgb(245, 245, 245);
+     background-image: url('vecteezy_abstract-white-and-light-gray-wave-modern-soft-luxury_11020176.jpg');
+     background-size: cover;         /* Makes the image cover the entire background */
+     background-repeat: no-repeat;   /* Prevents the image from repeating */
+     background-position: center; 
+}
+.box {
+    width: 589px;
+    height: 428px;
+    margin-left: 350px;
+    margin-top: 100px;
+    background: linear-gradient(145deg, rgb(3, 5, 41), rgba(5, 10, 75, 1));
+    background-color: rgb(5, 10, 75); /* Light grey background */
+    padding: 20px;
+    box-sizing: border-box; /* Ensure padding is included in the width and height */
+    border-radius: 50px;
+    box-shadow: 0 28px 32px rgba(0, 0, 0, 0.9);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    
+
+    
+}
+p {
+    color:rgb(245, 245, 245) ;
+} 
