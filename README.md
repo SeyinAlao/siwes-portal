@@ -27,6 +27,6 @@ While working as part of a team, I:
 
 📬 Contact
 
-- GitHub: @SeyinAlao
-- LinkedIn: seyinalao
+- GitHub: [@SeyinAlao](https://github.com/SeyinAlao)
+- LinkedIn: www.linkedin.com/in/seyinalao
 
